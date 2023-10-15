@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <!-- <script>
+        document.getElementById("nav").addClass("show")(
+            console.log('hello world')
+        )
+    </script> -->
+    <title>news page</title>
+</head>
+<body >
+    <header>
+        <img src="./assets/images/logo.svg">
+        <nav>
+            <img id="dropdown" src="./assets/images/icon-menu.svg">
+            <div id="dropdownmenu">
+                <img id="close" src="./assets/images/icon-menu-close.svg" />
+
+                <ul class="content">
+                    <li>Home</li>
+                    <li>New</li>
+                    <li>Popular</li>
+                    <li>Trending</li>
+                    <li>Categories</li>
+
+                </ul>
+            </div>
+        </nav>
+        <nav id="links">
+                <ul class="content">
+                    <li>Home</li>
+                    <li>New</li>
+                    <li>Popular</li>
+                    <li>Trending</li>
+                    <li>Categories</li>
+
+                </ul>
+        </nav>
+    </header>
+    <hero>
+        <div>
+            <img id="desktop" src="./assets/images/image-web-3-desktop.jpg">
+            <img id="mobile" src="./assets/images/image-web-3-mobile.jpg">
+
+            <div id="hero_text">
+                <span>
+                     The Bright Future of Web 3.0?
+                </span>
+                <div>
+                    <div>
+                        <p>
+                         we dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling that promise
+                         </p>
+                    </div>
+                    <button>READ MORE</button>
+                </div>
+            </div>
+    
+        </div>
+        <div id="new">
+           <div class="main_head">New</div>
+           <div>
+           <div>
+                <div class="sub_head">Hydrogen Vs Electric cars</div>
+                <div class="subject">will hydrogen fueled cars ever catch up with EVs</div>
+           </div>
+           <hr>
+           <div>
+                <div class="sub_head">The downside of AI artistry</div>
+                <div class="subject">What are the possible adverse effects of on-demand AI image generation?</div>
+            </div>
+           <hr>
+            <div>
+                <div class="sub_head">Is VC funding drying up</div>
+                <div class="subject"> Private funding by VC firms is down 50% YOY. We take a look at what that means. </div>
+            </div>
+        </div>
+         </div>
+    </hero>
+    <div id="article">
+        <div id="topic"> 
+            <img src="./assets/images/image-retro-pcs.jpg">
+            <div>
+            <div id="article_head">01</div>
+                
+                <p id="article_subhead">Reviving Retro PCs</p>
+                <p >What happens when old pcs are given mordern upgrades. </p>
+            </div>
+        </div>
+        <div id="topic"> 
+            <img src="./assets/images/image-gaming-growth.jpg">
+            <div>
+            <div id="article_head">02</div>
+                
+                <p id="article_subhead">Top 10 Laptops of 2022</p>
+                <p>our best pick for various needs and projects </p>
+            </div>
+        </div>
+        <div id="topic"> 
+            <img src="./assets/images/image-top-laptops.jpg">
+            <div>
+            <div id="article_head">03</div>
+                <p id="article_subhead">The Growth of Gaming</p>
+                <p>How the pandemic has sparked fresh opportunities </p>
+                </div>
+        </div>
+
+    </div>
+    <div id="overlay"></div>
+</body>
+
+<script>
+    const dropdownBtn = document.getElementById("dropdown");
+    const dropdownMenu = document.getElementById("dropdownmenu");
+    const Overlay = document.getElementById("overlay");
+    const Close = document.getElementById("close");
+
+
+    dropdownBtn.addEventListener("click", function(e){
+        console.log("clicked")
+        dropdownMenu.classList.add("show")
+        Overlay.classList.add("show");
+        document.documentElement.classList.add("stopscroll");
+    });
+
+    Overlay.addEventListener("click",function(){
+        if (dropdownMenu.classList.contains("show")){
+            dropdownMenu.classList.remove("show")
+            Overlay.classList.remove("show");
+
+            console.log("clicked off");
+
+            document.documentElement.classList.remove("stopscroll");
+
+        }
+    })
+
+
+    Close.addEventListener("click",function(){
+        if (dropdownMenu.classList.contains("show")){
+            dropdownMenu.classList.remove("show")
+            Overlay.classList.remove("show");
+            console.log("clicked off");
+            document.documentElement.classList.toggle("stopscroll");
+        }
+    })
+</script>
+</html> <!---->
