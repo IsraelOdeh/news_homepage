@@ -106,6 +106,22 @@ nav#links {
     color: white;
 }
 
+#article_subhead:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+#new .sub_head:hover {
+    color:hsl(35, 77%, 62%);;
+}
+
+
+.content li:hover{
+color: hsl(5, 85%, 63%);
+}
+
+#hero_text button:hover{
+    background-color: hsl(240, 100%, 5%);
+}
 
 #new{
     background-color: hsl(240, 100%, 5%);
